@@ -15,7 +15,7 @@
 先將此專案Clone到主機的資料夾
 
 ```
-git clone https://github.com/PaulChen79/Restaurant-List.git
+git clone https://github.com/PaulChen79/AlphaCamp-Restaurant-List-Assignment.git
 ```
 
 在下載的資料夾底下安裝dependencies
