@@ -1,86 +1,54 @@
-# 餐廳清單 2.0
+# 餐廳清單網頁
 
-此專案提供使用者新增、刪除及修改餐廳的資訊，例如:餐廳類別、地址、評分、描述等
+這是一個使用express與Node.js打造的餐廳網頁，可以查看餐廳詳細資料，以及搜尋想要的餐廳名稱或種類
 
-## 功能列表
+## Images 網頁圖片
 
-1. 依照餐廳名稱及餐廳類別搜尋
-  - 優化搜尋功能
-    - 剔除多餘的空白
-    - 搜尋沒有結果時也有對應頁面提示
-2. 可從首頁點擊餐廳圖片了解餐廳詳細資訊
+![image](https://github.com/PaulChen79/Restaurant-List/blob/main/public/screenshot/localhost_3000_.png)
+![image](https://github.com/PaulChen79/Restaurant-List/blob/main/public/screenshot/localhost_3000_search_keywords=%25E5%2593%2588%25E5%259B%2589.png)
+![image](https://github.com/PaulChen79/Restaurant-List/blob/main/public/screenshot/localhost_3000_search_keywords=saba.png)
 
-## 先決條件
-* Windows系統
 
-### 安裝
+### Installing 安裝流程
 
-1.開啟終端機(Terminal)cd 到存放專案本機位置並執行:
+先將此專案Clone到主機的資料夾
 
 ```
-git clone https://github.com/ks0dcongra/Restaurant_List.git
+git clone https://github.com/PaulChen79/Restaurant-List.git
 ```
 
-2.進入專案資料夾
+在下載的資料夾底下安裝dependencies
 
 ```
-cd restaurant_list
+npm install
 ```
 
-### 3.~8.為若你過去沒有下載過node.js，所需要執行的事，若曾經使用過node.js請跳至9.。
+下載完成後執行add.js檔案
 
-3.安操nvm
 ```
-到這裡 https://github.com/coreybutler/nvm-windows/releases 安裝nvm，選擇最新版本的nvm-setup.zip 檔案，請注意路徑中不能有空白或中文。
-npm install  //安裝套件
+npm run dev
 ```
 
-4.CMD查看是否安裝成功
-```
-$ nvm version
-```
-
-5.查看目前有再更新的版本
-```
-$ nvm list available
-```
-
-6.下載node.js 14.16.0 版
-```
-$ nvm use 14.16.0
-```
-
-7.使用node.js 14.16.0 版
-```
-$ nvm use 14.16.0
-```
-
-8.檢查node.js版本
-```
-$ node -v
-```
-
-9.開啟程式
-```
-npm run dev 
-```
-
-10.打開瀏覽器網址列輸入 http://localhost:3000/
-
-終端顯示 `Express is running on http://localhost:3000` 即啟動完成，請至[http://localhost:3000](http://localhost:3000)開始使用程式
-
-## 系統截圖
-![首頁](https://github.com/ks0dcongra/Restaurant_List/blob/main/restaurant_list/public/img/0.jpg)
-![搜尋成功](https://github.com/ks0dcongra/Restaurant_List/blob/main/restaurant_list/public/img/1.jpg)
-![搜尋失敗](https://github.com/ks0dcongra/Restaurant_List/blob/main/restaurant_list/public/img/3.jpg)
-![單一餐廳詳細資料](https://github.com/ks0dcongra/Restaurant_List/blob/main/restaurant_list/public/img/2.jpg)
+如果ternimal有出現 "Server is running on port 3000" 字樣，即可在 http://localhost:3000 看到此網頁
 
 
-## 使用工具
-- [Visual Studio Code](https://visualstudio.microsoft.com/zh-hant/) - 開發環境
-- [Express](https://www.npmjs.com/package/express) - 應用程式架構
-- [Express-Fileupload](https://www.npmjs.com/package/express-fileupload) - 上傳圖片並放置指定目錄
-- [Express-Handlebars](https://www.npmjs.com/package/express-handlebars) - 模板引擎
+## Features 功能
 
-## Acknowledgments
-* AlphaCamp
+-首頁可以瀏覽餐廳簡單資訊  
+-點擊餐廳圖片可以瀏覽詳細資訊，以及google map連結  
+-可以搜尋想要的餐廳名稱及類別
+
+
+## Dependencies 使用套件
+
+Node.js v4.16.0
+express  
+express-handlebars
+express-session
+connect-flash  
+modemon  
+
+## Contributor 開發人員
+
+Pin Hsu Chen
+
