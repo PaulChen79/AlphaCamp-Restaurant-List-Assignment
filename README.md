@@ -2,6 +2,7 @@
 
 這是一個使用express與Node.js打造的餐廳網頁，可以查看餐廳詳細資料，以及搜尋想要的餐廳名稱或種類
 
+
 ## Images 網頁圖片
 
 ![image](https://github.com/PaulChen79/Restaurant-List/blob/main/public/screenshot/localhost_3000_.png)
@@ -32,11 +33,23 @@ npm run dev
 如果ternimal有出現 "Server is running on port 3000" 字樣，即可在 http://localhost:3000 看到此網頁
 
 
+### Seeding 使用種子資料初始化
+
+使用以下指令可以新增種子資料
+
+```
+npm run seed
+```
+
+
 ## Features 功能
 
 -首頁可以瀏覽餐廳簡單資訊  
 -點擊餐廳圖片可以瀏覽詳細資訊，以及google map連結  
--可以搜尋想要的餐廳名稱及類別
+-可以搜尋想要的餐廳名稱及類別  
+-可以新增自己想要的餐廳  
+-可以編輯餐廳的詳細資訊  
+-可以刪除你想刪除的餐廳  
 
 
 ## Dependencies 使用套件
@@ -47,6 +60,7 @@ express-handlebars
 express-session  
 connect-flash  
 modemon  
+
 
 ## Contributor 開發人員
 

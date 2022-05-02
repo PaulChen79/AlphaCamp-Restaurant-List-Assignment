@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+  <script src="https://kit.fontawesome.com/e3915ef76a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/stylesheets/index.css">
   <link rel="stylesheet" href="/stylesheets/show.css">
   <title>我的餐廳清單</title>
@@ -23,9 +24,9 @@
           我的餐廳清單
         </a>
       </div>
+      <button type="button" class="btn btn-outline-info" onclick="window.location.href='/restaurants/new'">新增餐廳</button>
     </nav>
-    {{> messages}}
-
+    <div>{{> messages}}</div>
     <div class="banner"></div>
   </header>
   <!-- partial templates will replace the part of "body" here -->

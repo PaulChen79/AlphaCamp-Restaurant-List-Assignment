@@ -1,0 +1,90 @@
+<h1 class="mb-1 restaurant-show-title">新增餐廳</h1>
+<div class="container">
+  <form action="/restaurants/new" method="POST">
+    <div class="row">
+      <div class="col-12 col-md-10 mx-auto">
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-house pr-2"></i>
+            名稱：
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入名稱"
+          aria-label=".form-control-lg example" name="name" value="{{restaurant.name}}" required>
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-utensils pr-2"></i>
+            類別：
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入類別"
+          aria-label=".form-control-lg example" name="category" value="{{restaurant.category}}" list="datalistOptions" required>
+        <datalist id="datalistOptions">
+          <option value="日本料理">
+          <option value="中東料裡">
+          <option value="酒吧">
+          <option value="美式餐廳">
+          <option value="義式餐廳">
+          <option value="台式餐廳">
+          <option value="咖啡廳">
+        </datalist>
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-map-marker-alt pr-2"></i>
+            地址：
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-1" type="text" placeholder="請輸入地址"
+          aria-label=".form-control-lg example" name="location" value="{{restaurant.location}}" required>
+        <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入Google Map網址"
+          aria-label=".form-control-lg example" name="google_map" value="{{restaurant.google_map}}">
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-mobile-alt pr-2"></i>
+            電話：
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入電話"
+          aria-label=".form-control-lg example" name="phone" value="{{restaurant.phone}}" required>
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-message pr-2"></i>
+            編輯敘述
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入敘述"
+          aria-label=".form-control-lg example" name="description" value="{{restaurant.description}}" required>
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-heart pr-2"></i>
+            評分
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-3" type="number" min="0" max="5" step="0.1" placeholder="請輸入評分"
+          aria-label=".form-control-lg example" name="rating" value="{{restaurant.rating}}">
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-image pr-2"></i>
+            更換照片
+          </span>
+        </p>
+        <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入照片網址"
+          aria-label=".form-control-lg example" name="image" value="{{restaurant.image}}">
+
+        <button type="submit" class="btn btn-secondary mb-5">
+          儲存
+        </button>
+
+        <img class="rounded mx-auto d-block mb-4 w-100" src="{{restaurant.image}}" alt="{{restaurant.name}}"
+          style="max-width: 600px;">
+      </div>
+    </div>
+  </form>
+</div>
