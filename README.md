@@ -59,6 +59,9 @@ express
 express-handlebars  
 express-session  
 connect-flash  
+dotenv  
+method-override  
+mongoose  
 modemon  
 
 
