@@ -41,10 +41,10 @@ npm run dev
 
 ## Dependencies 使用套件
 
-Node.js v4.16.0
+Node.js v4.16.0  
 express  
-express-handlebars
-express-session
+express-handlebars  
+express-session  
 connect-flash  
 modemon  
 
