@@ -1,6 +1,6 @@
 # 餐廳清單網頁
 
-這是一個使用express與Node.js打造的餐廳網頁，可以查看餐廳詳細資料，以及搜尋想要的餐廳名稱或種類
+這是一個使用express與Node.js打造的餐廳網頁，可以查看餐廳詳細資料，以及新增、編輯、刪除、搜尋想要的餐廳名稱或種類
 
 
 ## Images 網頁圖片
@@ -8,6 +8,7 @@
 ![image](https://github.com/PaulChen79/Restaurant-List/blob/main/public/screenshot/localhost_3000_.png)
 ![image](https://github.com/PaulChen79/Restaurant-list/blob/29d741a4910d777e6b095d326a3f4d20e62a8d7b/public/screenshot/localhost_3000_noresult.png)
 ![image](https://github.com/PaulChen79/Restaurant-List/blob/main/public/screenshot/localhost_3000_search_keywords=saba.png)
+![image](https://github.com/PaulChen79/Restaurant-list/blob/bb0cc10157bf556d235333776c8da634fba76114/public/screenshot/localhost_3000_.png)
 
 
 ### Installing 安裝流程
@@ -24,7 +25,13 @@ git clone https://github.com/PaulChen79/AlphaCamp-Restaurant-List-Assignment.git
 npm install
 ```
 
-下載完成後執行add.js檔案
+下載完成後新增一個.env，放入MONGODB_URI，連結你的mongoBD
+
+```
+MONGODB_URI = mongodb+srv://<你的mongoDB帳號>:<你的mongoDB密碼>@cluster0.xxxx.xxxx.net/<你的MongoDB Table><?retryWrites=true&w=majority
+```
+
+連結完成後執行add.js檔案
 
 ```
 npm run dev
@@ -50,6 +57,7 @@ npm run seed
 -可以新增自己想要的餐廳  
 -可以編輯餐廳的詳細資訊  
 -可以刪除你想刪除的餐廳  
+-可以使用Sort功能去排序餐廳頁面  
 
 
 ## Dependencies 使用套件
