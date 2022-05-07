@@ -6,9 +6,11 @@ const Restaurants = require("../../models/restaurant")
 router.get('/', (req, res) => {
   if (!req.query.keyword) res.redirect('/')
   const keyword = req.query.keyword.trim().toLowerCase()
+  const sortKey = req.query.sort || 'name'
 
   Restaurants.find()
     .lean()
+    .sort(sortKey)
     .then(restaurant => {
       const filteredRestaurant = restaurant.filter(restaurants => 
         restaurants.name.toLowerCase().includes(keyword) || restaurants.category.toLowerCase().includes(keyword)
