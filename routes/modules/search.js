@@ -17,9 +17,9 @@ router.get('/', (req, res) => {
     .lean()
     .sort(sortKey)
     .then(filteredRestaurant => {
-      if (!filteredRestaurant) {
-        req.flash('error_messages', `沒有符合 ${keyword} 的餐廳或類別`)
-        res.redirect('/')
+      if (!filteredRestaurant.length) {
+        req.flash('error_messages', `沒有符合 ${req.query.keyword} 的餐廳或類別`)
+        res.redirect('back')
       } else {
         res.render('index', { restaurant: filteredRestaurant, keyword: req.query.keyword })  
       }
