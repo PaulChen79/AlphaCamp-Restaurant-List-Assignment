@@ -20,7 +20,8 @@
           </span>
         </p>
         <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入類別"
-          aria-label=".form-control-lg example" name="category" value="{{restaurant.category}}" list="datalistOptions" required>
+          aria-label=".form-control-lg example" name="category" value="{{restaurant.category}}" list="datalistOptions"
+          required>
         <datalist id="datalistOptions">
           <option value="日本料理">
           <option value="中東料裡">
@@ -39,6 +40,12 @@
         </p>
         <input class="form-control form-control-sm mb-1" type="text" placeholder="請輸入地址"
           aria-label=".form-control-lg example" name="location" value="{{restaurant.location}}" required>
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-map-marker-alt pr-2"></i>
+            Google Map：
+          </span>
+        </p>
         <input class="form-control form-control-sm mb-3" type="text" placeholder="請輸入Google Map網址"
           aria-label=".form-control-lg example" name="google_map" value="{{restaurant.google_map}}">
 

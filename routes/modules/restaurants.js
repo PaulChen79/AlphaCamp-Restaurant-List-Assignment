@@ -1,6 +1,7 @@
-const express = require("express")
+const express = require('express')
 const router = express.Router()
-const Restaurants = require("../../models/restaurant")
+const validUrl = require('valid-url')
+const Restaurants = require('../../models/restaurant')
 
 // Get create restaurant page
 router.get('/new', (req, res) => {
@@ -9,9 +10,16 @@ router.get('/new', (req, res) => {
 
 // Create restaurant
 router.post('/new', (req, res) => {
-  if (!req.body.name || !req.body.category || !req.body.location || !req.body.phone || !req.body.description) {
-    req.flash('error_messages','必填欄位需要填寫！')
-    req.redirect('back')
+  const { name, category, location, phone, description, image, google_map } = req.body
+  if (!name || !category || !location || !phone || !description) {
+    req.flash('error_messages', '必填欄位需要填寫！')
+    res.redirect('back')
+    return
+  }
+  if (!validUrl.isUri(image) || !validUrl.isUri(google_map)) {
+    req.flash('error_messages', '圖片網址或google map必須是有效網址！')
+    res.redirect('back')
+    return
   }
   Restaurants.create(req.body)
     .then(() => {
@@ -24,7 +32,7 @@ router.post('/new', (req, res) => {
 // View restaurant details
 router.get('/:id', (req, res) => {
   const id = req.params.id
-  Restaurants.findById(id)  
+  Restaurants.findById(id)
     .lean()
     .then(restaurant => {
       if (!restaurant) {
@@ -40,7 +48,7 @@ router.get('/:id', (req, res) => {
 // Get restaurant edit page
 router.get('/:id/edit', (req, res) => {
   const id = req.params.id
-  Restaurants.findById(id)  
+  Restaurants.findById(id)
     .lean()
     .then(restaurant => {
       if (!restaurant) {
@@ -56,9 +64,16 @@ router.get('/:id/edit', (req, res) => {
 // Update restaurant
 router.put('/:id/edit', (req, res) => {
   const id = req.params.id
-  if (!req.body.name || !req.body.category || !req.body.location || !req.body.phone || !req.body.description) {
+  const { name, category, location, phone, description, image, google_map } = req.body
+  if (!name || !category || !location || !phone || !description) {
     req.flash('error_messages', '必填欄位需要填寫！')
-    req.redirect('back')
+    res.redirect('back')
+    return
+  }
+  if (!validUrl.isUri(image) || !validUrl.isUri(google_map)) {
+    req.flash('error_messages', '圖片網址或google map必須是有效網址！')
+    res.redirect('back')
+    return
   }
   Restaurants.findByIdAndUpdate(id, req.body)
     .then(() => {

@@ -1,6 +1,6 @@
-const express = require("express")
+const express = require('express')
 const router = express.Router()
-const Restaurants = require("../../models/restaurant")
+const Restaurants = require('../../models/restaurant')
 
 // Search restaurant
 router.get('/', (req, res) => {
