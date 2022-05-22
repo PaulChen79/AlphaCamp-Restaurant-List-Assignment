@@ -2,8 +2,9 @@ const db = require('../../config/mongoose')
 const Restaurant = require('../restaurant')
 const seed = require('./restaurant.json')
 
-db.once('open', () => {
-  return Promise.all(Array.from(seed.results, restaurant => {
+db.once('open', async () => {
+  await Promise.all(
+    Array.from(seed.results, restaurant => {
       return Restaurant.create({
         name: restaurant.name,
         name_en: restaurant.name_en,
@@ -15,9 +16,8 @@ db.once('open', () => {
         rating: restaurant.rating,
         description: restaurant.description
       })
-    }))
-    .then(() => {
-      console.log('done!')
-      process.exit()
     })
+  )
+  console.log('done!')
+  process.exit()
 })

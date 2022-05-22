@@ -9,7 +9,7 @@ const restaurantSchema = new mongoose.Schema({
   phone: { type: String, require: true },
   google_map: { type: String },
   rating: { type: Number, require: true },
-  description: { type: String, require: true },
+  description: { type: String, require: true }
 })
 
 module.exports = mongoose.model('Restaurant', restaurantSchema)

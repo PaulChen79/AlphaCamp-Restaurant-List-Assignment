@@ -9,7 +9,7 @@ require('./config/mongoose')
 require('dotenv').config()
 
 app.engine('hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }))
-app.set('view engine','hbs')
+app.set('view engine', 'hbs')
 
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
