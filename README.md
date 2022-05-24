@@ -35,7 +35,7 @@ MONGODB_URI = mongodb+srv://<你的mongoDB帳號>:<你的mongoDB密碼>@cluster0
 連結完成後使用以下 command 生成種子資料
 
 ```
-npm seed
+npm run seed
 ```
 
 種子資料會有 2 個 user 資料：
