@@ -19,6 +19,8 @@ app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUniniti
 usePassport(app)
 app.use(flash())
 app.use((req, res, next) => {
+	res.locals.isAuthenticated = req.isAuthenticated()
+	res.locals.user = req.user
 	res.locals.success_messages = req.flash('success_messages')
 	res.locals.error_messages = req.flash('error_messages')
 	next()
