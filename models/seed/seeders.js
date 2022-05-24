@@ -49,4 +49,3 @@ db.once('open', async () => {
 		console.log(error)
 	}
 })
-
